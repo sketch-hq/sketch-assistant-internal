@@ -1,0 +1,30 @@
+{
+  "@sketch-hq/sketch-assistant-core-rules/borders-no-disabled": {
+    "active": true
+  },
+  "@sketch-hq/sketch-assistant-core-rules/groups-no-empty": {
+    "active": true
+  },
+  "@sketch-hq/sketch-assistant-core-rules/groups-no-redundant": {
+    "active": true
+  },
+  "@sketch-hq/sketch-assistant-core-rules/layers-no-hidden": {
+    "active": true
+  },
+  "@sketch-hq/sketch-assistant-core-rules/images-no-outsized": {
+    "active": true,
+    "maxRatio": 2
+  },
+  "@sketch-hq/sketch-assistant-core-rules/text-styles-prefer-shared": {
+    "active": true,
+    "maxIdentical": 1
+  },
+  "@sketch-hq/sketch-assistant-core-rules/layer-styles-prefer-shared": {
+    "active": true,
+    "maxIdentical": 1
+  },
+  "@sketch-hq/sketch-assistant-core-rules/layers-subpixel-positioning": {
+    "active": true,
+    "scaleFactors": ["@1x", "@2x"]
+  }
+}

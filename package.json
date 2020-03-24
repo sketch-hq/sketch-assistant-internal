@@ -1,0 +1,34 @@
+{
+  "name": "@sketch-hq/sketch-assistant-internal",
+  "description": "Activates and configures rules from the Core Rules Sketch Assistant",
+  "repository": "github:sketch-hq/sketch-assistant-internal",
+  "version": "0.1.0",
+  "main": "index.js",
+  "sketch": "sketch.js",
+  "license": "MIT",
+  "keywords": [
+    "sketch",
+    "sketch files",
+    "sketch assistant",
+    "assistant",
+    "design ops",
+    "batteries included"
+  ],
+  "files": [
+    "index.js",
+    "sketch.js"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "2.6.1",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11"
+  },
+  "dependencies": {
+    "@sketch-hq/sketch-assistant-core-rules": "1.1.0"
+  },
+  "scripts": {
+    "build": "yarn webpack",
+    "package-tarball": "yarn build && yarn pack",
+    "release": "yarn build && changeset publish"
+  }
+}
