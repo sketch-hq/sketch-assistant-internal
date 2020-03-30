@@ -1,0 +1,29 @@
+name: Add Tarball to Release
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  add_tgz:
+    name: Add Tarball to Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@master
+        with:
+          node-version: '12.6.0'
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build Tarball
+        run: yarn package-tarball
+      - name: Add Tarball to Release
+        uses: ncipollo/release-action@master
+        with:
+          allowUpdates: true
+          artifacts: "*.tgz"
+          artifactContentType: application/x-gzip
+          token: ${{ secrets.GITHUB_TOKEN }}
