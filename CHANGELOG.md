@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 1.0.4
+
+### Patch Changes
+
+- 09d1bae: Use v1 of release action
+
 ## 1.0.3
 
 ### Patch Changes
