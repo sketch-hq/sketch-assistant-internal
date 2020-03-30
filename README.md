@@ -27,7 +27,7 @@ The following rules are part of this Assistant:
 
 #### Using an official release
 
-1. Go to the [latest releases(https://github.com/sketch-hq/sketch-assistant-internal/releases/latest).
+1. Go to the [latest release](https://github.com/sketch-hq/sketch-assistant-internal/releases/latest).
 1. Read the release notes - they'll let you know what's changed, and if any new rules have been added.
 1. Expand the _Assets_ dropdown, and download the file named in the format `sketch-hq-sketch-assistant-internal-v#.#.#.tgz`.
 1. Once downloaded, add the local Assistant file to your Sketch document using the _Install from disk..._ option.
