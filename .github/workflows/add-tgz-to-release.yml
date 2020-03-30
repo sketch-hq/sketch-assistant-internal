@@ -2,7 +2,7 @@ name: Add Tarball to Release
 on:
   push:
     tags:
-      - '*'
+    - '*'
 jobs:
   add_tgz:
     name: Add Tarball to Release
