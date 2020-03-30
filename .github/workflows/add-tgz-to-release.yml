@@ -1,8 +1,8 @@
 name: Add Tarball to Release
 on:
-  push:
-    tags:
-    - '*'
+  release:
+    types:
+      - created
 jobs:
   add_tgz:
     name: Add Tarball to Release
@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-        with:
-          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@master
         with:
@@ -21,9 +19,8 @@ jobs:
       - name: Build Tarball
         run: yarn package-tarball
       - name: Add Tarball to Release
-        uses: ncipollo/release-action@v1
+        uses: shogo82148/actions-upload-release-asset@v1
         with:
-          allowUpdates: true
-          artifacts: "*.tgz"
-          artifactContentType: application/x-gzip
-          token: ${{ secrets.GITHUB_TOKEN }}
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: "*.tgz"
+          asset_content_type: application/gzip
