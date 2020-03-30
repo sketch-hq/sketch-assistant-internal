@@ -27,17 +27,18 @@ The following rules are part of this Assistant:
 
 #### Using an official release
 
-1. Go to [latest releases](https://github.com/sketch-hq/sketch-assistant-internal/releases/latest)
-1. Expand the _Assets_ dropdown, and download the file named in the format `sketch-hq-sketch-assistant-internal-v#.#.#.tgz`
-1. Add the local Assistant to your Sketch document using the _Install from disk..._ option
+1. Go to the [latest releases(https://github.com/sketch-hq/sketch-assistant-internal/releases/latest).
+1. Read the release notes - they'll let you know what's changed, and if any new rules have been added.
+1. Expand the _Assets_ dropdown, and download the file named in the format `sketch-hq-sketch-assistant-internal-v#.#.#.tgz`.
+1. Once downloaded, add the local Assistant file to your Sketch document using the _Install from disk..._ option.
 
 #### From source
 
-1. Ensure you have Node and Yarn installed
-1. Check out this repo
-1. Install the dependencies with `yarn`
-1. Run `yarn package-tarball` and the local assistant package will be written to the current folder as a `.tgz` file
-1. Add the local Assistant to your Sketch document using the _Install from disk..._ option
+1. Ensure you have Node and Yarn installed.
+1. Check out this repo.
+1. Install the dependencies with `yarn`.
+1. Run `yarn package-tarball` and the local assistant package will be written to the current folder as a `.tgz` file.
+1. Add the local Assistant to your Sketch document using the _Install from disk..._ option.
 
 ## Development
 
