@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 1.0.5
+
+### Patch Changes
+
+- 60f3782: Testing on.release.created GitHub Action
+
 ## 1.0.4
 
 ### Patch Changes
