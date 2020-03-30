@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 1.0.3
+
+### Patch Changes
+
+- ee2bfc6: Tweak GitHub Action syntax
+
 ## 1.0.2
 
 ### Patch Changes
