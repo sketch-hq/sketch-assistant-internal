@@ -21,7 +21,7 @@ jobs:
       - name: Build Tarball
         run: yarn package-tarball
       - name: Add Tarball to Release
-        uses: ncipollo/release-action@master
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           artifacts: "*.tgz"
