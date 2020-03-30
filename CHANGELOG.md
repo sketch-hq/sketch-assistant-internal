@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 1.0.2
+
+### Patch Changes
+
+- e2fc3b0: Use custom PAT for release action
+
 ## 1.0.1
 
 ### Patch Changes
