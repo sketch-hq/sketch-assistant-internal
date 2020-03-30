@@ -1,27 +1,43 @@
 # sketch-assistant-internal
 
-Activates and configures rules from the [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules). This Assistant aims to provide a set of usefully configured rules suitable for dogfooding internally at Sketch.
+This Assistant aims to provide a set of usefully configured rules suitable for dogfooding internally at Sketch. Activates and configures rules from the [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules).
 
-The Assistant configuration is available to view and update here:
+## Rules
 
-- [./config.json](config.json)
+The following rules are part of this Assistant:
+
+- No Disabled Borders [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/borders-no-disabled)
+- No Empty Groups [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/groups-no-empty)
+- No Redundant Groups [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/groups-no-redundant)
+- No Hidden Layers [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-no-hidden)
+- No Outsized Images (maxRatio: 2) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/images-no-outsized)
+- Prefer Shared Text Styles (maxIdentical: 1) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/text-styles-prefer-shared)
+- Prefer Shared Layer Styles (maxIdentical: 1) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layer-styles-prefer-shared)
+- Subpixel Positioning (scaleFactors: @1x and @2x) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-subpixel-positioning)
+
+> For the raw config information check [./config.json](config.json)
 
 ## Usage
 
 ### Add to Sketch
 
-TODO: Add a Sketch Assistant installation link/button here when ready.
+> 🚧 TODO: Add a Sketch Assistant installation link/button here when the feature is ready.
 
-### As a local development assistant
+### As a local development Assistant
 
-To package this assistant as a local development assistant, perform the following steps,
+#### Using an official release
+
+1. Go to [latest releases](https://github.com/sketch-hq/sketch-assistant-internal/releases/latest)
+1. Expand the _Assets_ dropdown, and download the file named in the format `sketch-hq-sketch-assistant-internal-v#.#.#.tgz`
+1. Add the local Assistant to your Sketch document using the _Install from disk..._ option
+
+#### From source
 
 1. Ensure you have Node and Yarn installed
 1. Check out this repo
 1. Install the dependencies with `yarn`
-1. Run `yarn package-tarball` and the local assistant package will be written to the current folder
-
-TODO: Add documentation about how to work with local development assistants where when ready.
+1. Run `yarn package-tarball` and the local assistant package will be written to the current folder as a `.tgz` file
+1. Add the local Assistant to your Sketch document using the _Install from disk..._ option
 
 ## Development
 
@@ -37,13 +53,14 @@ Interact with the tooling in this repository via the following scripts.
 | yarn build           | Builds the Assistant                   |
 | yarn package-tarball | Packages the Assistant as a local file |
 
-### Updating the configuration
+### Configure rules
 
 Update the configuration for existing rules, or add configuration for a new rule like so:
 
 1. Make changes to [./config.json](config.json) file.
+1. Make sure to update the [Rules](#rules) section of this readme with an entry
+1. Add a [changeset](#releases)
 1. Open a pull request to `master` and request a code review.
-1. Once ready to release a new version to npm too, follow the [instructions below](#releases).
 
 ### Releases
 
