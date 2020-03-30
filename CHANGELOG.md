@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 1.0.6
+
+### Patch Changes
+
+- 73389e5: Use `on.release.types.created` event for triggering tgz upload
+
 ## 1.0.5
 
 ### Patch Changes
