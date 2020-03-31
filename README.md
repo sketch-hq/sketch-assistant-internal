@@ -7,13 +7,35 @@ This Assistant aims to provide a set of usefully configured rules suitable for d
 The following rules are part of this Assistant:
 
 - No Disabled Borders [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/borders-no-disabled)
+- No Disabled Fills [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/fills-no-disabled)
+- No Disabled Shadows [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/shadows-no-disabled)
+- No Disabled Inner Shadows [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/inner-shadows-no-disabled)
+- No Dirty Layer Styles [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layer-styles-no-dirty)
+- No Dirty Text Styles [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/text-styles-no-dirty)
 - No Empty Groups [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/groups-no-empty)
 - No Redundant Groups [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/groups-no-redundant)
 - No Hidden Layers [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-no-hidden)
-- No Outsized Images (maxRatio: 2) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/images-no-outsized)
-- Prefer Shared Text Styles (maxIdentical: 1) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/text-styles-prefer-shared)
-- Prefer Shared Layer Styles (maxIdentical: 1) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layer-styles-prefer-shared)
-- Subpixel Positioning (scaleFactors: @1x and @2x) [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-subpixel-positioning)
+- No Outsized Images [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/images-no-outsized)
+  - maxRatio: 2
+- Prefer Shared Text Styles [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/text-styles-prefer-shared)
+  - maxIdentical: 1
+- Prefer Shared Layer Styles [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layer-styles-prefer-shared)
+  - maxIdentical: 1
+- Subpixel Positioning [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-subpixel-positioning)
+  - scaleFactors: @1x and @2x
+- Artboard Layer Names [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
+  - must be numbered. e.g. `1.1 Splash Screen`
+- Symbol Layer Names [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
+  - names must take advantage of forward-slash grouping, e.g. `Icon/Frog`
+- Group Layer Names [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
+  - default layer names are forbidden
+- Page Names [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
+  - must start with an emoji, e.g. `🚧 Work in Progress`
+- Shape Names [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-shapes)
+  - default layer names are forbidden
+- No Unused Shared Styles [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/shared-styles-no-unused)
+- No Unused Symbols [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/symbols-no-unused)
+- No Loose Layers [docs](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-no-loose)
 
 > For the raw config information check [./config.json](config.json)
 
