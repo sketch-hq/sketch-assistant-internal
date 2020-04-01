@@ -1,5 +1,27 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 2.0.0
+
+### Major Changes
+
+- a2b087f: Add `shared-styles-no-unused`
+- a2b087f: Add `fills-no-disabled`
+- a2b087f: Add `symbols-no-unused`
+- a2b087f: Add `shadows-no-disabled`
+- a2b087f: Add `inner-shadows-no-disabled`
+- a2b087f: Add `text-styles-no-dirty`
+- a2b087f: Add `name-pattern-artboards`
+- a2b087f: Add `name-pattern-pages`
+- a2b087f: Add `name-pattern-symbols`
+- a2b087f: Add `name-pattern-shapes`
+- a2b087f: Add `name-pattern-groups`
+- a2b087f: Add `layers-no-loose`
+- a2b087f: Add `layer-styles-no-dirty`
+
+### Patch Changes
+
+- a2b087f: Add some basic Jest testing
+
 ## 1.0.6
 
 ### Patch Changes
