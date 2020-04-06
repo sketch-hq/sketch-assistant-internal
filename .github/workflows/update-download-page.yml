@@ -21,6 +21,7 @@ jobs:
       - name: Copy Tarball to `docs`
         run: |
           export TARBALL_PATH=`ls -rt | tail -1`
+          cp $TARBALL_PATH docs/
           cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
       - name: Push changes
         uses: github-actions-x/commit@v2.3
@@ -28,6 +29,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'Update Download Page'
           rebase: true
-          files: docs/sketch-assistant-internal-latest.tgz
+          files: docs/*.tgz docs/index.md
           name: Sketch Developer
           email: developer@sketch.com
