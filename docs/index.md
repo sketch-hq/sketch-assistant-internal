@@ -6,7 +6,7 @@
 
 <style>
   /* hide GitHub's automatic header */
-  div.container-lg > h1 {
+  div.container-lg h1:not([id]) {
     display: none;
   }
 </style>
