@@ -10,3 +10,5 @@
     display: none;
   }
 </style>
+
+<link rel="stylesheet" href="https://www.sketch.com/css/style_globals.e3ae8f362d.css"/>
