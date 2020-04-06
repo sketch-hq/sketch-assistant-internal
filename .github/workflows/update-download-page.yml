@@ -1,8 +1,11 @@
 name: Update Download Page
 on:
-  release:
-    types:
-      - created
+  push:
+    branches:
+      - master
+  # release:
+  #   types:
+  #     - created
 jobs:
   update_web:
     name: Update Download Page
