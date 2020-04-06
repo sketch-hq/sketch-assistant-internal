@@ -1,0 +1,33 @@
+name: Update Download Page
+on:
+  push:
+    branches:
+      - master
+jobs:
+  update_web:
+    name: Update Download Page
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Setup Node
+        uses: actions/setup-node@master
+        with:
+          node-version: '12.6.0'
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build Tarball
+        run: yarn package-tarball
+      - name: Copy Tarball to `docs`
+        run: |
+          export TARBALL_PATH=`ls -rt | tail -1`
+          cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
+      - name: Push changes
+        uses: github-actions-x/commit@v2.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'Update Download Page'
+          rebase: true
+          files: docs/sketch-assistant-internal-latest.tgz
+          name: Sketch Developer
+          email: developer@sketch.com
