@@ -1,7 +1,3 @@
----
-title: Sketch Assistant
----
-
 <style>
   /* hide GitHub's automatic header */
   div.container-lg h1:not([id]) {
@@ -17,6 +13,4 @@ title: Sketch Assistant
 
 <a href="sketch-assistant-internal-latest.tgz">Link to local file</a>
 
-<link rel="stylesheet" href="https://www.sketch.com/css/style_globals.e3ae8f362d.css" />
-
-<small>Last update: {{ page.date }}</small>
+<!-- <link rel="stylesheet" href="https://www.sketch.com/css/style_globals.e3ae8f362d.css" /> -->
