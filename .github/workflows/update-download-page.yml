@@ -23,12 +23,15 @@ jobs:
           export TARBALL_PATH=`ls -rt | tail -1`
           cp $TARBALL_PATH docs/
           cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
+      - name: Update links in Changelog page
+        run: |
+          sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/[\1.\2.\3](sketch:\/\/install\/https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
       - name: Push changes
         uses: github-actions-x/commit@v2.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'Update Download Page'
           rebase: true
-          files: docs/*.tgz docs/index.md
+          files: docs/*.tgz docs/index.md docs/changelog.md
           name: Sketch Developer
           email: developer@sketch.com

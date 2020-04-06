@@ -4,7 +4,7 @@
     display: none;
   }
   a,
-  a:hover { text-decoration: none; }
+/*  a:hover { text-decoration: none; }*/
 </style>
 
 # Sketch Assistant
