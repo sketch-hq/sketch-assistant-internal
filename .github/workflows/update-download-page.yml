@@ -35,6 +35,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'Update Download Page'
           rebase: true
-          files: docs/*.tgz docs/index.md docs/changelog.md
+          files: docs/
           name: Sketch Developer
           email: developer@sketch.com
