@@ -1,5 +1,5 @@
 # Sketch Assistant
 
-<a href="sketch://foo?bar">Install Assistant</a>
+<a href="sketch://install-assistant?sketch-assistant-internal-latest.tgz">Install Assistant</a>
 
-<small>Last update: 2020-04-06</small>
+<a href="sketch-assistant-internal-latest.tgz">Link to local file</a>
