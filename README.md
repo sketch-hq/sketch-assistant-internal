@@ -2,6 +2,7 @@
 
 This Assistant aims to provide a set of usefully configured rules suitable for dogfooding internally at Sketch. Activates and configures rules from the [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules).
 
+
 ## Rules
 
 The following rules are part of this Assistant:
@@ -62,10 +63,12 @@ The following rules are part of this Assistant:
 1. Run `yarn package-tarball` and the local assistant package will be written to the current folder as a `.tgz` file.
 1. Add the local Assistant to your Sketch document using the _Install from disk..._ option.
 
+
 ## Development
 
 The following section of the readme only relates to developing the Assistant, not using it in your
 own projects.
+
 
 ### Scripts
 
@@ -76,6 +79,7 @@ Interact with the tooling in this repository via the following scripts.
 | yarn build           | Builds the Assistant                   |
 | yarn package-tarball | Packages the Assistant as a local file |
 
+
 ### Configure rules
 
 Update the configuration for existing rules, or add configuration for a new rule like so:
@@ -84,6 +88,7 @@ Update the configuration for existing rules, or add configuration for a new rule
 1. Make sure to update the [Rules](#rules) section of this readme with an entry
 1. Add a [changeset](#releases)
 1. Open a pull request to `master` and request a code review.
+
 
 ### Releases
 
