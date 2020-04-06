@@ -1,6 +1,6 @@
 # Sketch Assistant
 
-<a href="sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-assistant-internal-latest.tgz">Install Assistant</a>
+<a href="sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-assistant-internal-latest.tgz" class="button button--primary">Install Assistant</a>
 
 <a href="sketch-assistant-internal-latest.tgz">Link to local file</a>
 
