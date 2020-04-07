@@ -28,7 +28,7 @@ jobs:
           cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
       - name: Update links in Changelog page
         run: |
-          sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/[\1.\2.\3](sketch:\/\/install\/https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
+          sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/[\1.\2.\3](sketch:\/\/install-assistant?https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
       - name: Push changes
         uses: github-actions-x/commit@v2.3
         with:
