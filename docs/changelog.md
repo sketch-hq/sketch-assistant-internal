@@ -1,6 +1,6 @@
 # @sketch-hq/sketch-assistant-internal
 
-## [2.0.0](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v2.0.0.tgz)
+## [2.0.0](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v2.0.0.tgz)
 
 ### Major Changes
 
@@ -22,43 +22,43 @@
 
 - a2b087f: Add some basic Jest testing
 
-## [1.0.6](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.6.tgz)
+## [1.0.6](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.6.tgz)
 
 ### Patch Changes
 
 - 73389e5: Use `on.release.types.created` event for triggering tgz upload
 
-## [1.0.5](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.5.tgz)
+## [1.0.5](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.5.tgz)
 
 ### Patch Changes
 
 - 60f3782: Testing on.release.created GitHub Action
 
-## [1.0.4](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.4.tgz)
+## [1.0.4](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.4.tgz)
 
 ### Patch Changes
 
 - 09d1bae: Use v1 of release action
 
-## [1.0.3](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.3.tgz)
+## [1.0.3](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.3.tgz)
 
 ### Patch Changes
 
 - ee2bfc6: Tweak GitHub Action syntax
 
-## [1.0.2](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.2.tgz)
+## [1.0.2](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.2.tgz)
 
 ### Patch Changes
 
 - e2fc3b0: Use custom PAT for release action
 
-## [1.0.1](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.1.tgz)
+## [1.0.1](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.1.tgz)
 
 ### Patch Changes
 
 - 7ff2920: Add GitHub Action to copy package tgz to release
 
-## [1.0.0](sketch://install/https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.0.tgz)
+## [1.0.0](sketch://install-assistant?https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v1.0.0.tgz)
 
 ### Major Changes
 
