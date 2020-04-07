@@ -1,5 +1,12 @@
 {
+  "@sketch-hq/sketch-assistant-core-rules/artboards-max-ungrouped-layers": {
+    "active": true,
+    "maxUngroupedLayers": 5
+  },
   "@sketch-hq/sketch-assistant-core-rules/borders-no-disabled": {
+    "active": true
+  },
+  "@sketch-hq/sketch-assistant-core-rules/exported-layers-normal-blend-mode": {
     "active": true
   },
   "@sketch-hq/sketch-assistant-core-rules/fills-no-disabled": {
@@ -29,6 +36,10 @@
   "@sketch-hq/sketch-assistant-core-rules/images-no-outsized": {
     "active": true,
     "maxRatio": 2
+  },
+  "@sketch-hq/sketch-assistant-core-rules/images-no-undersized": {
+    "active": true,
+    "minRatio": 1
   },
   "@sketch-hq/sketch-assistant-core-rules/text-styles-prefer-shared": {
     "active": true,
@@ -68,9 +79,6 @@
     "forbidden": ["^Rectangle( Copy)*$", "^Oval( Copy)*$", "^Line( Copy)*$", "^Triangle( Copy)*$", "^Star( Copy)*$", "^Polygon( Copy)*$"]
   },
   "@sketch-hq/sketch-assistant-core-rules/shared-styles-no-unused": {
-    "active": true
-  },
-  "@sketch-hq/sketch-assistant-core-rules/symbols-no-unused": {
     "active": true
   },
   "@sketch-hq/sketch-assistant-core-rules/layers-no-loose": {
