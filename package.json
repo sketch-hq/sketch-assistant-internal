@@ -26,7 +26,7 @@
     "webpack-cli": "3.3.11"
   },
   "dependencies": {
-    "@sketch-hq/sketch-assistant-core-rules": "2.0.0"
+    "@sketch-hq/sketch-assistant-core-rules": "3.0.0"
   },
   "scripts": {
     "build": "yarn webpack",
