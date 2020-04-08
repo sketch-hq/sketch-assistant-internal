@@ -1,7 +1,8 @@
 # sketch-assistant-internal
 
-This Assistant aims to provide a set of usefully configured rules suitable for dogfooding internally at Sketch. Activates and configures rules from the [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules).
+> 💁‍♀️ This Assistant aims to provide a set of usefully configured rules suitable for dogfooding internally at Sketch. Activates and configures rules from the [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules).
 
+[![](https://img.shields.io/badge/-Install%20Internal%20Assistant%20-fa6400.svg?style=flat&colorA=fa6400)](https://sketch-hq.github.io/sketch-assistant-internal)
 
 ## Rules
 
@@ -44,35 +45,10 @@ The following rules are part of this Assistant:
 
 > For the raw config information check [./config.json](config.json)
 
-## Usage
-
-### Add to Sketch
-
-> 🚧 TODO: Add a Sketch Assistant installation link/button here when the feature is ready.
-
-### As a local development Assistant
-
-#### Using an official release
-
-1. Go to the [latest release](https://github.com/sketch-hq/sketch-assistant-internal/releases/latest).
-1. Read the release notes - they'll let you know what's changed, and if any new rules have been added.
-1. Expand the _Assets_ dropdown, and download the file named in the format `sketch-hq-sketch-assistant-internal-v#.#.#.tgz`.
-1. Once downloaded, add the local Assistant file to your Sketch document using the _Install from disk..._ option.
-
-#### From source
-
-1. Ensure you have Node and Yarn installed.
-1. Check out this repo.
-1. Install the dependencies with `yarn`.
-1. Run `yarn package-tarball` and the local assistant package will be written to the current folder as a `.tgz` file.
-1. Add the local Assistant to your Sketch document using the _Install from disk..._ option.
-
-
 ## Development
 
 The following section of the readme only relates to developing the Assistant, not using it in your
 own projects.
-
 
 ### Scripts
 

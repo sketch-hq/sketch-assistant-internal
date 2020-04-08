@@ -640,10 +640,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sketch-hq/sketch-assistant-core-rules@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-assistant-core-rules/-/sketch-assistant-core-rules-3.0.0.tgz#c79e0fc1ab3d2fb400af0e054eaf27e9e111893d"
-  integrity sha512-5iwwpf39lMNRFaNuo79i/u0TCKePllOFEa74bx/h+0XPSALac1e12Q+pG0QyKNVPKURC39E0A3ZeqpbYj6qlZA==
+"@sketch-hq/sketch-assistant-core-rules@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-assistant-core-rules/-/sketch-assistant-core-rules-3.0.1.tgz#ddbaf154a010a094ff4381155869e8ee1091a5f9"
+  integrity sha512-ZEuKZfFQ+9ubp/dxZK3w9XjdtgAbbVrxjtkFJbH+jswIKQryoIOoPrntFhheQJhFz1SyTPP2BulR/W+5x3xObA==
   dependencies:
     "@lingui/core" "2.9.1"
     "@sketch-hq/sketch-assistant-types" "1.0.0"
