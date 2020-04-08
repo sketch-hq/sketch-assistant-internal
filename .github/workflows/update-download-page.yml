@@ -28,11 +28,9 @@ jobs:
           sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/\1.\2.\3 [📥](sketch:\/\/install-assistant?url=https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
           sed -i '1d' docs/changelog.md
       - name: Push changes
-        uses: github-actions-x/commit@v2.3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Update Download Page'
-          rebase: true
-          files: docs/
-          name: Sketch Developer
-          email: developer@sketch.com
+        run: |
+          git config --global user.name 'Sketch Developer'
+          git config --global user.email 'developer@sketch.com'
+          git add docs/
+          git commit -am 'Update Download Page'
+          git push
