@@ -1,0 +1,34 @@
+name: Update GitHub Pages
+on:
+  release:
+    types:
+      - created
+jobs:
+  update:
+    name: Update GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Setup Node
+        uses: actions/setup-node@master
+        with:
+          node-version: '12.6.0'
+      - name: Main
+        run: |
+          # Setup Git
+          git config --global user.name 'Sketch Developer'
+          git config --global user.email 'developer@sketch.com'
+          # Install deps and build tarball while in the commit associated with the release
+          yarn install --frozen-lockfile
+          yarn package-tarball
+          export TARBALL_PATH=`ls -rt *.tgz | tail -1`
+          # Change to master and update the docs folder
+          git checkout master
+          cp $TARBALL_PATH docs/
+          cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
+          sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/\1.\2.\3 [📥](sketch:\/\/install-assistant?url=https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
+          sed -i '1d' docs/changelog.md
+          git add -A
+          git commit -am 'chore: update github pages'
+          git push origin master
