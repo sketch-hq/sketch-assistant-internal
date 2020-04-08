@@ -2,4 +2,4 @@
 "@sketch-hq/sketch-assistant-internal": minor
 ---
 
-New rules added
+Added additional rules `exported-layers-no-blend-mode`, `artboards-max-ungrouped-layers` and `images-no-undersized`.

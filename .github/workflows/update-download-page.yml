@@ -1,8 +1,5 @@
 name: Update Download Page
 on:
-  # push:
-  #   branches:
-  #     - master
   release:
     types:
       - created
@@ -26,9 +23,10 @@ jobs:
           export TARBALL_PATH=`ls -rt | tail -1`
           cp $TARBALL_PATH docs/
           cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
-      - name: Update links in Changelog page
+      - name: Update Changelog
         run: |
-          sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/[\1.\2.\3](sketch:\/\/install-assistant?https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
+          sed -E "s/([[:digit:]]).([[:digit:]]).([[:digit:]])$/\1.\2.\3 [📥](sketch:\/\/install-assistant?url=https:\/\/sketch-hq.github.io\/sketch-assistant-internal\/sketch-hq-sketch-assistant-internal-v\1.\2.\3.tgz)/" CHANGELOG.md > docs/changelog.md
+          sed -i '1d' docs/changelog.md
       - name: Push changes
         uses: github-actions-x/commit@v2.3
         with:
