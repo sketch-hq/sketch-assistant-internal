@@ -24,6 +24,7 @@ jobs:
           yarn package-tarball
           export TARBALL_PATH=`ls -rt *.tgz | tail -1`
           # Change to master and update the docs folder
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git checkout master
           cp $TARBALL_PATH docs/
           cp $TARBALL_PATH docs/sketch-assistant-internal-latest.tgz
