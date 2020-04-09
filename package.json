@@ -1,10 +1,13 @@
 {
   "name": "@sketch-hq/sketch-assistant-internal",
-  "description": "Activates and configures rules from the Core Rules Sketch Assistant",
   "repository": "github:sketch-hq/sketch-assistant-internal",
   "version": "2.1.0",
   "main": "index.js",
   "sketch": "sketch.js",
+  "sketch-assistant": {
+    "title": "Sketch Internal Assistant",
+    "description": "Provides a set of usefully configured rules suitable for dogfooding internally at Sketch"
+  },
   "license": "MIT",
   "keywords": [
     "sketch",
@@ -20,13 +23,13 @@
   ],
   "devDependencies": {
     "@changesets/cli": "2.6.2",
-    "@sketch-hq/sketch-assistant-utils": "3.0.1",
-    "jest": "25.2.4",
+    "@sketch-hq/sketch-assistant-utils": "4.0.0",
+    "jest": "25.3.0",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11"
   },
   "dependencies": {
-    "@sketch-hq/sketch-assistant-core-rules": "3.0.1"
+    "@sketch-hq/sketch-assistant-core-rules": "3.0.2"
   },
   "scripts": {
     "build": "yarn webpack",
