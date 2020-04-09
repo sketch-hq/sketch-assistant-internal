@@ -1,4 +1,10 @@
 
+## 2.1.1 [📥](sketch://install-assistant?url=https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v2.1.1.tgz)
+
+### Patch Changes
+
+- 734c0a6: Update dependencies and add human readable metadata to package.json
+
 ## 2.1.0 [📥](sketch://install-assistant?url=https://sketch-hq.github.io/sketch-assistant-internal/sketch-hq-sketch-assistant-internal-v2.1.0.tgz)
 
 ### Minor Changes
