@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 2.1.1
+
+### Patch Changes
+
+- 734c0a6: Update dependencies and add human readable metadata to package.json
+
 ## 2.1.0
 
 ### Minor Changes
