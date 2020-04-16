@@ -1,163 +1,113 @@
 const { resolve } = require('path')
-const utils = require('@sketch-hq/sketch-assistant-utils')
+const { testRule } = require('@sketch-hq/sketch-assistant-utils')
 
 const assistant = require('./index')
 const config = require('./config')
 
-const queryViolationsByRuleName = (violations, rule) => violations.filter((v) =>
-  v.ruleName.includes(rule)
-)
+const testCoreRuleWithConfig = async (fixture, ruleId, numViolations = 1) => {
+  const ruleName = `@sketch-hq/sketch-assistant-core-rules/${ruleId}`
+  const { violations, errors } = await testRule(
+    resolve(__dirname, fixture),
+    assistant,
+    ruleName,
+    config[ruleName],
+  )
+  expect(violations).toHaveLength(numViolations)
+  expect(errors).toHaveLength(0)
+}
 
 test('borders-no-disabled', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/disabled-border.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'borders-no-disabled')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/disabled-border.sketch', 'borders-no-disabled')
 })
 
 test('fills-no-disabled', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/disabled-fill.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'fills-no-disabled')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/disabled-fill.sketch', 'fills-no-disabled')
 })
 
 test('shadows-no-disabled', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/disabled-shadow.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'shadows-no-disabled')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/disabled-shadow.sketch', 'shadows-no-disabled')
 })
 
 test('inner-shadows-no-disabled', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/disabled-inner-shadow.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'inner-shadows-no-disabled')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig(
+    './fixtures/disabled-inner-shadow.sketch',
+    'inner-shadows-no-disabled',
+  )
 })
 
 test('groups-no-empty', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/empty-group.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'groups-no-empty')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/empty-group.sketch', 'groups-no-empty')
 })
 
 test('layer-styles-no-dirty', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/dirty-style.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'layer-styles-no-dirty')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/dirty-style.sketch', 'layer-styles-no-dirty')
 })
 
 test('groups-no-redundant', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/redundant-group.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'groups-no-redundant')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/redundant-group.sketch', 'groups-no-redundant')
 })
 
 test('layers-no-hidden', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/hidden-layer.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'layers-no-hidden')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/hidden-layer.sketch', 'layers-no-hidden')
 })
 
 test('images-no-outsized', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/outsized-image.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'images-no-outsized')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/outsized-image.sketch', 'images-no-outsized')
 })
 
 test('text-styles-prefer-shared', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/multiple-text-styles.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'text-styles-prefer-shared')
-
-  expect(ruleViolations).toHaveLength(2)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig(
+    './fixtures/multiple-text-styles.sketch',
+    'text-styles-prefer-shared',
+    2,
+  )
 })
 
 test('layer-styles-prefer-shared', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/multiple-layer-styles.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'layer-styles-prefer-shared')
-
-  expect(ruleViolations).toHaveLength(2)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig(
+    './fixtures/multiple-layer-styles.sketch',
+    'layer-styles-prefer-shared',
+    2,
+  )
 })
 
 test('layers-subpixel-positioning', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/subpixel-positioning.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'layers-subpixel-positioning')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig(
+    './fixtures/subpixel-positioning.sketch',
+    'layers-subpixel-positioning',
+  )
 })
 
 test('name-pattern-artboards', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/named-artboards.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'name-pattern-artboards')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/named-artboards.sketch', 'name-pattern-artboards')
 })
 
 test('name-pattern-symbols', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/named-symbols.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'name-pattern-symbols')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/named-symbols.sketch', 'name-pattern-symbols')
 })
 
 test('name-pattern-pages', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/named-pages.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'name-pattern-pages')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/named-pages.sketch', 'name-pattern-pages')
 })
 
 test('name-pattern-shapes', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/named-shapes.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'name-pattern-shapes')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/named-shapes.sketch', 'name-pattern-shapes')
 })
 
 test('artboards-max-ungrouped-layers', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/artboards-max-ungrouped-layers.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'artboards-max-ungrouped-layers')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig(
+    './fixtures/artboards-max-ungrouped-layers.sketch',
+    'artboards-max-ungrouped-layers',
+  )
 })
 
 test('images-no-undersized', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/images-no-undersized.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'images-no-undersized')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig('./fixtures/images-no-undersized.sketch', 'images-no-undersized')
 })
 
 test('shared-styles-no-unused', async () => {
-  const { violations, errors } = await utils.testRule(resolve(__dirname, './fixtures/shared-styles-no-unused.sketch'), config, assistant)
-  const ruleViolations = queryViolationsByRuleName(violations, 'shared-styles-no-unused')
-
-  expect(ruleViolations).toHaveLength(1)
-  expect(errors).toHaveLength(0)
+  await testCoreRuleWithConfig(
+    './fixtures/shared-styles-no-unused.sketch',
+    'shared-styles-no-unused',
+  )
 })
-
-
