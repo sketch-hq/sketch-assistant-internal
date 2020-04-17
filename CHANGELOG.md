@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 3.0.0-next.0
+
+### Major Changes
+
+- d9b66a2: Release first next pre prelease
+
 ## 2.1.1
 
 ### Patch Changes
@@ -10,11 +16,13 @@
 
 ### Minor Changes
 
-- 75d94ab: Added additional rules `exported-layers-no-blend-mode`, `artboards-max-ungrouped-layers` and `images-no-undersized`.
+- 75d94ab: Added additional rules `exported-layers-no-blend-mode`, `artboards-max-ungrouped-layers`
+  and `images-no-undersized`.
 
 ### Patch Changes
 
-- 9f0f1ba: Bug fix: handle layer positions with more than two decimal places when checking subpixel positioning
+- 9f0f1ba: Bug fix: handle layer positions with more than two decimal places when checking subpixel
+  positioning
 - 9f0f1ba: Bug fix: do not check styles in combined shapes
 
 ## 2.0.0
