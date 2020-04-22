@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 3.0.0-next.2
+
+### Patch Changes
+
+- 183794e: Update deps
+
 ## 3.0.0-next.1
 
 ### Patch Changes
