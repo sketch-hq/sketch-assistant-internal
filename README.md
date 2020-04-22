@@ -1,6 +1,8 @@
 # sketch-assistant-internal
 
-> 💁‍♀️ This Assistant aims to provide a set of usefully configured rules suitable for dogfooding internally at Sketch. Activates and configures rules from the [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules).
+> 💁‍♀️ This Assistant aims to provide a set of usefully configured rules suitable for dogfooding
+> internally at Sketch. Activates and configures rules from the
+> [Core Rules Sketch Assistant](https://github.com/sketch-hq/sketch-assistant-core-rules).
 
 [![](https://img.shields.io/badge/-Install%20Internal%20Assistant%20-fa6400.svg?style=flat&colorA=fa6400)](https://sketch-hq.github.io/sketch-assistant-internal)
 
@@ -9,7 +11,7 @@
 The following rules are part of this Assistant:
 
 - [Artboard Layer Names](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
-  - must be numbered. e.g. `1.1 Splash Screen`
+  - must start with an emojii or be numbered. e.g. `1.1 Splash Screen`
 - [Artboards Max Ungrouped](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/artboards-max-ungrouped-layers)
   - maxUngroupedLayers: `5`
 - [No Blend Modes In Exported Layers](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/exported-layers-no-blend-mode)
@@ -36,12 +38,12 @@ The following rules are part of this Assistant:
   - names must take advantage of forward-slash grouping, e.g. `Icon/Frog`
 - [Group Layer Names](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
   - default layer names are forbidden
-- [Page Names](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-artboards)
+- [Page Names](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-pages)
   - must start with an emoji, e.g. `🚧 Work in Progress`
 - [Shape Names](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/name-pattern-shapes)
   - default layer names are forbidden
 - [Subpixel Positioning](https://github.com/sketch-hq/sketch-assistant-core-rules/tree/master/src/rules/layers-subpixel-positioning)
-  - scaleFactors: `@1x` and `@2x`
+  - scaleFactors: only allows 0.5 subpixel increments
 
 > For the raw config information check [./config.json](config.json)
 
@@ -59,7 +61,6 @@ Interact with the tooling in this repository via the following scripts.
 | yarn build           | Builds the Assistant                   |
 | yarn package-tarball | Packages the Assistant as a local file |
 
-
 ### Configure rules
 
 Update the configuration for existing rules, or add configuration for a new rule like so:
@@ -68,7 +69,6 @@ Update the configuration for existing rules, or add configuration for a new rule
 1. Make sure to update the [Rules](#rules) section of this readme with an entry
 1. Add a [changeset](#releases)
 1. Open a pull request to `master` and request a code review.
-
 
 ### Releases
 

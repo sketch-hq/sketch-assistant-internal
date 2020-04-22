@@ -55,8 +55,11 @@
   },
   "@sketch-hq/sketch-assistant-core-rules/name-pattern-artboards": {
     "active": true,
-    "allowed": ["^((\\d+).*\\d).*$"],
-    "forbidden": []
+    "forbidden": [
+    ],
+    "allowed": [
+      "^(?![a-zA-Z,.-_;!\"#$%&/()@Û£><|\\¼»`«])."
+    ]
   },
   "@sketch-hq/sketch-assistant-core-rules/name-pattern-symbols": {
     "active": true,
@@ -70,10 +73,11 @@
   },
   "@sketch-hq/sketch-assistant-core-rules/name-pattern-pages": {
     "active": true,
-    "allowed": [
-      "^(\\u00a9|\\u00ae|[\\u2000-\\u3300]|\\ud83c[\\ud000-\\udfff]|\\ud83d[\\ud000-\\udfff]|\\ud83e[\\ud000-\\udfff])\\s.*\\w$"
+    "forbidden": [
     ],
-    "forbidden": []
+    "allowed": [
+      "^(?![a-zA-Z0-9,.-_;!\"#$%&/()@Û£><|\\¼»`«])."
+    ]
   },
   "@sketch-hq/sketch-assistant-core-rules/name-pattern-shapes": {
     "active": true,
