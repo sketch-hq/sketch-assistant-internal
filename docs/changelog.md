@@ -1,4 +1,22 @@
 
+## 3.0.0-next.3
+
+### Patch Changes
+
+- 09146f5: Fixes regex for pages and artboards name pattern
+
+## 3.0.0-next.2
+
+### Patch Changes
+
+- 183794e: Update deps
+
+## 3.0.0-next.1
+
+### Patch Changes
+
+- 1557db1: Make package public
+
 ## 3.0.0-next.0
 
 ### Major Changes
