@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-assistant-internal
 
+## 3.0.0-next.3
+
+### Patch Changes
+
+- 09146f5: Fixes regex for pages and artboards name pattern
+
 ## 3.0.0-next.2
 
 ### Patch Changes
