@@ -6,6 +6,8 @@
 
 [![](https://img.shields.io/badge/-Install%20Internal%20Assistant%20-fa6400.svg?style=flat&colorA=fa6400)](https://sketch-hq.github.io/sketch-assistant-internal)
 
+[Test](https://add-sketch-assistant.now.sh/api/main?variant=experimental&url=https://registry.npmjs.org/@sketch-hq/sketch-assistant-internal/-/sketch-assistant-internal-2.1.1.tgz)
+
 ## Rules
 
 The following rules are part of this Assistant:
